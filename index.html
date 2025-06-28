@@ -1,253 +1,72 @@
 <!DOCTYPE html>
-<!-- saved from url=(0035)https://nqpkodpk.gensparkspace.com/ -->
+<!-- saved from url=(0035)https://isewaimz.gensparkspace.com/ -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全身麻酔説明書</title>
+    <title>全身麻酔説明書（スマートフォン対応版）</title>
+    <link href="./全身麻酔説明書（スマートフォン対応版）_files/tailwind.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+         {
+            body { font-size: 12pt; }
+            .no-print { display: none; }
         }
         
-        body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .section-card {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1.5rem;
         }
         
-        .header {
+        .icon-large {
+            font-size: 2rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        
+        .text-responsive {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        @media (max-width: 640px) {
+            .text-responsive {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+            .icon-large {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .step-number {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header .clinic-info {
-            font-size: 16px;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 30px;
-        }
-        
-        .section {
-            margin-bottom: 35px;
-            border-left: 4px solid #667eea;
-            padding-left: 20px;
-        }
-        
-        .section-title {
-            font-size: 20px;
-            color: #667eea;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .icon {
-            font-size: 24px;
-            width: 30px;
-            text-align: center;
-        }
-        
-        .section-content {
-            background: #f8f9ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-        }
-        
-        .step-list {
-            list-style: none;
-            counter-reset: step-counter;
-        }
-        
-        .step-list li {
-            counter-increment: step-counter;
-            margin-bottom: 15px;
-            padding: 15px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative;
-            padding-left: 60px;
-        }
-        
-        .step-list li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 15px;
-            top: 15px;
-            background: #667eea;
-            color: white;
-            width: 30px;
-            height: 30px;
+            width: 2rem;
+            height: 2rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
         
-        .complication-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .complication-table th,
-        .complication-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .complication-table th {
-            background: #667eea;
-            color: white;
-            font-weight: bold;
-        }
-        
-        .complication-table tr:hover {
-            background: #f5f5f5;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 5px solid #ff6b6b;
-        }
-        
-        .highlight-box h4 {
-            color: #d63031;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .info-box {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 5px solid #00b894;
-        }
-        
-        .info-box h4 {
-            color: #00b894;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .medication-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .medication-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .complication-item {
             border-left: 4px solid #667eea;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
         }
         
-        .medication-card h5 {
-            color: #667eea;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .footer {
-            background: #f8f9ff;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-        }
-        
-        .contact-info {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .contact-info h4 {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        .emergency-steps {
-            background: #fff5f5;
-            border: 2px solid #feb2b2;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-        }
-        
-        .emergency-steps h4 {
-            color: #e53e3e;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-         {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-            
-            .section {
-                page-break-inside: avoid;
-            }
-        }
+        .risk-high { border-left-color: #ef4444; }
+        .risk-medium { border-left-color: #f59e0b; }
+        .risk-low { border-left-color: #10b981; }
     </style>
 <style>
     .genspark-notice-dialog {
@@ -350,260 +169,322 @@
       width: 100%;
     }
   </style></head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📋 全身麻酔説明書</h1>
-            <div class="clinic-info">耳鼻咽喉科　たかだ鼻クリニック大阪</div>
+<body class="bg-gray-50 text-gray-800">
+    <!-- ヘッダー -->
+    <div class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-2xl md:text-3xl font-bold text-center">
+                <span class="icon-large">🏥</span>
+                全身麻酔説明書
+            </h1>
+            <p class="text-center mt-4 text-lg opacity-90">安全な手術のために知っておいていただきたいこと</p>
         </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-6 max-w-4xl">
         
-        <div class="content">
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">💉</span>
-                    全身麻酔とは
-                </h2>
-                <div class="section-content">
-                    <p>麻酔薬で意識をなくし、痛みなどを感じなくさせる方法です。手術中に苦痛を感じることはありません。</p>
+        <!-- 全身麻酔とは -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">
+                <span class="icon-large">💉</span>全身麻酔とは
+            </h2>
+            <p class="text-responsive">
+                麻酔薬で意識をなくし、痛みなどを感じなくさせる方法です。手術中に苦痛を感じることはありません。
+            </p>
+        </div>
+
+        <!-- 手術前の絶食・絶水 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-red-600">
+                <span class="icon-large">🚫</span>手術前の絶食・絶水について
+            </h2>
+            <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
+                <p class="text-responsive font-semibold text-red-800">重要：必ずお守りください</p>
+            </div>
+            <p class="text-responsive mb-4">
+                全身麻酔中の誤嚥性肺炎の発症を予防するため、下記の期間は絶食・絶水を行ってください。
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-yellow-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">🍽️ 絶食</h3>
+                    <p>手術前日の午後11時～<br>（以降は水やお茶のみ可）</p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-lg mb-2">💧 絶水</h3>
+                    <p>手術予定時間の2時間前～</p>
                 </div>
             </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">🚫</span>
-                    手術前の絶食・絶水について
-                </h2>
-                <div class="section-content">
-                    <p>全身麻酔中の誤嚥性肺炎の発症を予防するため、下記の期間は絶食・絶水を行って下さい。</p>
-                    
-                    <div class="highlight-box">
-                        <h4>⚠️ 重要な時間</h4>
-                        <ul>
-                            <li><strong>絶食：</strong>手術前日の午後11時～（以降は水やお茶のみ可）</li>
-                            <li><strong>絶水：</strong>手術予定時間の2時間前～</li>
-                        </ul>
-                        <p><strong>※絶食・絶水ができていない場合は、手術延期もしくは麻酔法の変更が必要となることがあります。</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">💊</span>
-                    定期の薬（内服薬、吸入薬など）について
-                </h2>
-                <div class="section-content">
-                    <p>麻酔説明書の薬剤管理欄に詳細を記載していますのでご確認下さい。</p>
-                    
-                    <div class="info-box">
-                        <h4>📝 確認事項</h4>
-                        <ul>
-                            <li>休薬が必要な薬が休薬できていない場合は手術延期が必要となることがあります</li>
-                            <li>麻酔についての説明を受けられた後に、定期の薬の追加あるいは変更があった場合にはクリニックスタッフにお知らせください</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">🏥</span>
-                    手術当日の流れ
-                </h2>
-                <div class="section-content">
-                    <p><strong>※具体的な手術当日のタイムスケジュールは看護師から説明いたします。</strong></p>
-                    
-                    <ol class="step-list">
-                        <li>手術室入室後、血圧計や心電図などのモニターを装着し、手に点滴をします。</li>
-                        <li>マスクで酸素を吸っていただいた後、点滴から麻酔の薬を入れると、数十秒以内に眠くなります。</li>
-                        <li>眠っていただいた後は、麻酔薬の影響で呼吸の補助が必要となるため、口からのどにやわらかいプラスチック製のチューブを入れます。</li>
-                        <li>手術中は麻酔担当医が医療機器を用いて状態を常時観察し、麻酔薬などの追加や輸液などを行います。</li>
-                        <li>手術終了後約15分程度で目が覚め始めます。自発的な呼吸が十分に回復したことを確認し、のどに入れていたチューブを抜きます。チューブは麻酔から完全に覚める前に抜くため、ほとんど記憶には残りません。</li>
-                        <li>以下の条件が整ったことを確認できましたら、ご帰宅が可能となります：
-                            <ul style="margin-top: 10px;">
-                                <li>✅ 水分を飲むことができる</li>
-                                <li>✅ 排尿ができる</li>
-                                <li>✅ ふらつきや吐き気がない、または軽度で我慢できる程度</li>
-                                <li>✅ 痛みが我慢できる程度（自制内）</li>
-                                <li>✅ 創部の状態に問題がない</li>
-                                <li>✅ 全身状態が安定している</li>
-                            </ul>
-                            <p style="margin-top: 10px;"><strong>手術終了からおよそ1時間程度で帰宅される方が多いですが、個人差があります。</strong></p>
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">⚠️</span>
-                    麻酔の合併症について
-                </h2>
-                <div class="section-content">
-                    <p>麻酔が原因でおきる重篤な合併症の発生率は、麻酔科管理症例のうち数万例に1例程度（死亡症例は約10万例に1例程度）と極めてまれですが、以下のような合併症が起こることがあります。</p>
-                    
-                    <h4 style="color: #667eea; margin: 20px 0 10px 0;">よくある合併症（比較的頻度が高い）</h4>
-                    <table class="complication-table">
-                        <thead>
-                            <tr>
-                                <th>合併症</th>
-                                <th>詳細・リスク要因</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>🤢 吐き気・嘔吐</strong></td>
-                                <td>女性、小児、乗り物酔いしやすい方でリスクが高い</td>
-                            </tr>
-                            <tr>
-                                <td><strong>😮 のどの痛み・舌の腫れ・声のかすれ</strong></td>
-                                <td>手術中に呼吸を補助するチューブを口からのどに入れていた影響で生じることがあります。通常は術後2～3日で自然に良くなります。<br><strong>リスクが高い方：</strong>口の開きが小さい人、睡眠時無呼吸のある方、手術時間が長くなった場合</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🦷 歯が欠ける・ぐらつく・抜ける</strong></td>
-                                <td><strong>リスクが高い方：</strong>もともとぐらついている歯がある方や歯のかぶせものなどがゆるい方</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h4 style="color: #667eea; margin: 20px 0 10px 0;">まれな合併症（頻度は低いが注意が必要）</h4>
-                    <table class="complication-table">
-                        <thead>
-                            <tr>
-                                <th>合併症</th>
-                                <th>発生率・リスク要因</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>🩸 肺塞栓症</strong></td>
-                                <td>0.008～0.04%<br>肥満、下肢血栓症の既往、女性ホルモン剤・抗がん剤服用者、長時間の手術でリスク増加<br><strong>予防対策：</strong>医療用の弾性ストッキングを着用</td>
-                            </tr>
-                            <tr>
-                                <td><strong>❤️ 心筋梗塞</strong></td>
-                                <td>1.8～3.0%<br>50歳以上、心疾患・糖尿病・高血圧の既往、喫煙者でリスク増加</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🧠 脳梗塞</strong></td>
-                                <td>0.08～0.37%<br>50歳以上、不整脈・脳血管疾患の既往、喫煙者でリスク増加</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🧠 脳内出血・くも膜下出血</strong></td>
-                                <td>50歳以上、高血圧・脳血管疾患の既往、喫煙者でリスク増加</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🫁 肺炎（誤嚥性肺炎）</strong></td>
-                                <td>麻酔中や麻酔直後に胃の内容物が気管内や肺に入ることで発生</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🔬 薬に対するアレルギー</strong></td>
-                                <td>麻酔薬や手術の消毒薬に対する過敏反応</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🫁 ぜんそく発作を含む気管支痙攣・喉頭痙攣</strong></td>
-                                <td>呼吸困難を引き起こす可能性</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🏥 持病の悪化</strong></td>
-                                <td>心臓、肺、腎臓、肝臓や脳などの既存疾患の悪化</td>
-                            </tr>
-                            <tr>
-                                <td><strong>🌡️ 悪性高熱症</strong></td>
-                                <td>2～6万人に1人程度と極めてまれ<br>麻酔薬により高熱が出る、筋肉が硬直する遺伝的な異常<br>血縁の方に麻酔でこのような異常反応を起こした方がいれば麻酔科医にお知らせ下さい</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">🌡️</span>
-                    手術前の体調不良等について
-                </h2>
-                <div class="section-content">
-                    <h4 style="color: #667eea; margin-bottom: 15px;">🏥 手術前の体調管理について</h4>
-                    
-                    <p>手術前に以下のような症状がある場合は、安全のため手術を延期することがあります：</p>
-                    
-                    <div class="emergency-steps">
-                        <h4>⚠️ 手術延期が必要な症状</h4>
-                        <ul>
-                            <li>🌡️ <strong>熱がある</strong>（37.5℃以上）</li>
-                            <li>🤧 <strong>風邪の症状</strong>（のどの痛み、鼻水、咳など）</li>
-                            <li>🤮 <strong>お腹の調子が悪い</strong>（吐き気、嘔吐、下痢など）</li>
-                            <li>💥 <strong>帯状疱疹やヘルペスなど</strong>（水ぶくれを伴う痛い発疹）</li>
-                            <li>🦠 <strong>細菌やウイルスが原因の病気にかかった場合や、もともとあった病気が悪化した場合</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>📞 大切なお願い</h4>
-                        <p>手術予定日の2週間前から体調に注意し、上記のような症状がある場合は必ず当院にご連絡ください。早めにご相談いただくことで、適切な対応ができます。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">🚭</span>
-                    手術前の禁煙について
-                </h2>
-                <div class="section-content">
-                    <div class="highlight-box">
-                        <h4>🚭 手術前1か月間の禁煙を推奨</h4>
-                        <p>喫煙は、手術の合併症を増やし、術後の痛みを強くし、傷の治りを悪くします。禁煙はいつからはじめても合併症を減らす効果があり、早いほど有効です。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">💉</span>
-                    手術前の予防接種について
-                </h2>
-                <div class="section-content">
-                    <p>全身麻酔や手術は免疫に影響するため、ワクチンを接種したあとに全身麻酔や手術を受けると副反応が強くなったり、ワクチンの効果自体が弱くなったりする可能性があります。</p>
-                    <p><strong>手術予定日の１か月以内に予防接種を予定している場合には当院スタッフにお知らせ下さい。</strong></p>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">
-                    <span class="icon">🤱</span>
-                    妊娠中の麻酔について
-                </h2>
-                <div class="section-content">
-                    <div class="emergency-steps">
-                        <h4>⚠️ 重要な注意事項</h4>
-                        <p>手術当日までに妊娠していることが判明した、もしくは妊娠の可能性がでた場合は、速やかに当院スタッフにお知らせ下さい。</p>
-                        <p><strong>妊娠中の麻酔は流産や胎児の健康を害する可能性があります。</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-info">
-                <h4>📞 お問い合わせ</h4>
-                <p><strong>耳鼻咽喉科　たかだ鼻クリニック大阪</strong></p>
-                <p><strong>電話番号：06-6777-3080</strong></p>
+            <div class="mt-4 p-4 bg-red-100 rounded-lg">
+                <p class="text-responsive text-red-800">
+                    ⚠️ 絶食・絶水ができていない場合は、手術延期もしくは麻酔法の変更が必要となることがあります。
+                </p>
             </div>
         </div>
 
-        <div class="footer">
-            <p>この説明書をお読みいただき、ご不明な点がございましたら遠慮なくお尋ねください。</p>
-            <p>安全で快適な手術を受けていただけるよう、スタッフ一同努めてまいります。</p>
+        <!-- 定期の薬について -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-purple-600">
+                <span class="icon-large">💊</span>定期の薬（内服薬、吸入薬など）について
+            </h2>
+            <p class="text-responsive mb-4">
+                定期の薬についての詳細は、麻酔同意書に記載していますのでご確認ください。
+            </p>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4">
+                <p class="text-responsive">
+                    📋 麻酔についての説明を受けられた後に、定期の薬の追加あるいは変更があった場合にはクリニックスタッフにお知らせください。
+                </p>
+            </div>
+        </div>
+
+        <!-- 手術当日の流れ -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-green-600">
+                <span class="icon-large">⏰</span>手術当日の流れ
+            </h2>
+            <p class="text-responsive mb-6">
+                📝 なお、具体的な手術当日のタイムスケジュールは看護師から説明いたします。
+            </p>
+            
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <div class="step-number">1</div>
+                    <p class="text-responsive">手術室入室後、血圧計や心電図などのモニターを装着し、手に点滴をします。</p>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="step-number">2</div>
+                    <p class="text-responsive">マスクで酸素を吸っていただいた後、点滴から麻酔の薬を入れると、数十秒以内に眠くなります。</p>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="step-number">3</div>
+                    <p class="text-responsive">眠っていただいた後は、麻酔薬の影響で呼吸の補助が必要となるため、口からのどにやわらかいプラスチック製のチューブを入れます。</p>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="step-number">4</div>
+                    <p class="text-responsive">手術中は麻酔担当医が医療機器を用いて状態を常時観察し、麻酔薬などの追加や輸液などを行います。</p>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="step-number">5</div>
+                    <p class="text-responsive">手術終了後約15分程度で目が覚め始めます。自発的な呼吸が十分に回復したことを確認し、のどに入れていたチューブを抜きます。</p>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="step-number">6</div>
+                    <div>
+                        <p class="text-responsive mb-2">以下の条件が整ったことを確認できましたら、ご帰宅が可能となります：</p>
+                        <div class="bg-green-50 p-4 rounded-lg ml-4">
+                            <h4 class="font-bold mb-2">✅ 帰宅の条件</h4>
+                            <ul class="space-y-1 text-responsive">
+                                <li>• 水分を飲むことができる</li>
+                                <li>• 排尿ができる</li>
+                                <li>• ふらつきや吐き気がない、または軽度で我慢できる程度</li>
+                                <li>• 痛みが我慢できる程度（自制内）</li>
+                                <li>• 創部の状態に問題がない</li>
+                                <li>• 全身状態が安定している</li>
+                            </ul>
+                            <p class="text-responsive mt-2 font-semibold">
+                                🕐 帰宅までの時間：手術終了からおよそ1時間程度で帰宅される方が多いですが、個人差があります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 麻酔の合併症 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-orange-600">
+                <span class="icon-large">⚠️</span>麻酔の合併症について
+            </h2>
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p class="text-responsive">
+                    麻酔が原因でおきる重篤な合併症の発生率は、麻酔科管理症例のうち数万例に1例程度（死亡症例は約10万例に1例程度）と極めてまれです。
+                </p>
+            </div>
+
+            <h3 class="text-lg font-bold mb-4 text-red-600">よくある合併症（比較的頻度が高い）</h3>
+            
+            <div class="complication-item risk-high">
+                <h4 class="font-bold text-lg mb-2">1. 吐き気・嘔吐</h4>
+                <p class="text-responsive mb-2">手術後に起こることがあります。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：女性、小児、乗り物酔いしやすい方</p>
+            </div>
+
+            <div class="complication-item risk-high">
+                <h4 class="font-bold text-lg mb-2">2. のどの痛み・舌の腫れ・声のかすれ</h4>
+                <p class="text-responsive mb-2">手術中に呼吸を補助するチューブを口からのどに入れていた影響で生じることがあります。通常は術後2～3日で自然に良くなります。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：口の開きが小さい人、睡眠時無呼吸のある方、手術時間が長くなった場合</p>
+            </div>
+
+            <div class="complication-item risk-medium">
+                <h4 class="font-bold text-lg mb-2">3. 歯が欠ける・ぐらつく・抜ける</h4>
+                <p class="text-responsive mb-2">気管挿管時に起こることがあります。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：もともとぐらついている歯がある方や歯のかぶせものなどがゆるい方</p>
+            </div>
+
+            <h3 class="text-lg font-bold mb-4 mt-6 text-orange-600">まれな合併症（頻度は低いが注意が必要）</h3>
+
+            <div class="complication-item risk-medium">
+                <h4 class="font-bold text-lg mb-2">4. 肺塞栓症（0.008～0.04%）</h4>
+                <p class="text-responsive mb-2">血栓が肺の血管に詰まる病気です。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：肥満、下肢血栓症の既往、女性ホルモン剤・抗がん剤服用者、長時間の手術</p>
+                <p class="text-sm text-blue-600">予防対策：医療用の弾性ストッキングを着用</p>
+            </div>
+
+            <div class="complication-item risk-medium">
+                <h4 class="font-bold text-lg mb-2">5. 心筋梗塞（1.8～3.0%）</h4>
+                <p class="text-responsive mb-2">心臓の血管が詰まる病気です。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：50歳以上、心疾患・糖尿病・高血圧の既往、喫煙者</p>
+            </div>
+
+            <div class="complication-item risk-medium">
+                <h4 class="font-bold text-lg mb-2">6. 脳梗塞（0.08～0.37%）</h4>
+                <p class="text-responsive mb-2">脳の血管が詰まる病気です。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：50歳以上、不整脈・脳血管疾患の既往、喫煙者</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">7. 肺炎（誤嚥性肺炎）</h4>
+                <p class="text-responsive">胃の内容物が気管に入って起こる肺炎です。</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">8. 薬に対するアレルギー</h4>
+                <p class="text-responsive">麻酔薬や消毒薬によるアレルギー反応です。</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">9. ぜんそく発作を含む気管支痙攣・喉頭痙攣</h4>
+                <p class="text-responsive">気道が狭くなって呼吸が困難になる状態です。</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">10. 持病の悪化</h4>
+                <p class="text-responsive">心臓、肺、腎臓、肝臓や脳などの持病が悪化することがあります。</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">11. 脳内出血・くも膜下出血</h4>
+                <p class="text-responsive mb-2">脳の血管が破れる病気です。</p>
+                <p class="text-sm text-gray-600">リスクが高い方：50歳以上、高血圧・脳血管疾患の既往、喫煙者</p>
+            </div>
+
+            <div class="complication-item risk-low">
+                <h4 class="font-bold text-lg mb-2">12. 悪性高熱症（2～6万人に1人）</h4>
+                <p class="text-responsive mb-2">麻酔薬により高熱が出る、筋肉が硬直するといった危険な状態になる遺伝的な異常です。</p>
+                <p class="text-sm text-gray-600">血縁の方に麻酔でこのような異常反応を起こした方がいれば麻酔科医にお知らせください。</p>
+            </div>
+        </div>
+
+        <!-- 手術前の体調管理 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-red-600">
+                <span class="icon-large">🌡️</span>手術前の体調管理について
+            </h2>
+            <p class="text-responsive mb-4">
+                手術前に以下のような症状がある場合は、安全のため手術を延期することがあります：
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">🔴 注意が必要な症状</h4>
+                    <ul class="text-responsive space-y-1">
+                        <li>• 熱がある（37.5℃以上）</li>
+                        <li>• 風邪の症状（のどの痛み、鼻水、咳など）</li>
+                        <li>• お腹の調子が悪い（吐き気、嘔吐、下痢など）</li>
+                        <li>• 帯状疱疹やヘルペスなど（水ぶくれを伴う痛い発疹）</li>
+                        <li>• その他の感染症の症状</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">📞 大切なお願い</h4>
+                    <p class="text-responsive">
+                        手術予定日の2週間前から体調に注意し、上記のような症状がある場合は必ず当院にご連絡ください。早めにご相談いただくことで、適切な対応ができます。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 手術前の禁煙 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-gray-600">
+                <span class="icon-large">🚭</span>手術前の禁煙について
+            </h2>
+            <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                <h3 class="font-bold text-lg mb-2">推奨：手術前1か月間の禁煙</h3>
+            </div>
+            <p class="text-responsive mb-4">
+                喫煙は、手術の合併症を増やし、術後の痛みを強くし、傷の治りを悪くします。
+            </p>
+            <p class="text-responsive">
+                禁煙はいつからはじめても合併症を減らす効果があり、早いほど有効です。
+            </p>
+        </div>
+
+        <!-- 手術前の予防接種 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-indigo-600">
+                <span class="icon-large">💉</span>手術前の予防接種について
+            </h2>
+            <p class="text-responsive mb-4">
+                全身麻酔や手術は免疫に影響するため、ワクチンを接種したあとに全身麻酔や手術を受けると副反応が強くなったり、ワクチンの効果自体が弱くなったりする可能性があります。
+            </p>
+            <div class="bg-indigo-50 p-4 rounded-lg">
+                <p class="text-responsive font-semibold">
+                    📅 手術予定日の１か月以内に予防接種を予定している場合には当院スタッフにお知らせください。
+                </p>
+            </div>
+        </div>
+
+        <!-- 妊娠中の麻酔 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-pink-600">
+                <span class="icon-large">🤱</span>妊娠中の麻酔について
+            </h2>
+            <div class="bg-pink-50 border-l-4 border-pink-400 p-4">
+                <p class="text-responsive font-semibold mb-2">
+                    ⚠️ 重要なお知らせ
+                </p>
+                <p class="text-responsive">
+                    手術当日までに妊娠していることが判明した、もしくは妊娠の可能性がでた場合は、速やかに当院スタッフにお知らせください。妊娠中の麻酔は流産や胎児の健康を害する可能性があります。
+                </p>
+            </div>
+        </div>
+
+        <!-- クリニック情報 -->
+        <div class="section-card">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 text-blue-600">
+                <span class="icon-large">📞</span>お問い合わせ
+            </h2>
+            <div class="text-center bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold mb-2">耳鼻咽喉科　たかだ鼻クリニック大阪</h3>
+                <p class="text-lg font-semibold mb-4">
+                    📞 電話番号：06-6777-3080
+                </p>
+                <p class="text-responsive">
+                    ご不明な点やご心配なことがございましたら、お気軽にお問い合わせください。
+                </p>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="text-center mt-8 p-4 text-gray-600">
+            <p class="text-sm">© 耳鼻咽喉科　たかだ鼻クリニック大阪</p>
+            <p class="text-xs mt-2">この説明書は患者の皆様の安全な手術のために作成されています</p>
         </div>
     </div>
 
 
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDk8qaeSCbotQG6M3QobBCB1FXnnBt5SCFq0FkSelOfbKGhGx6KlCHvImnTU2K%2BhTB7ybG0qxA4%2FYtAtMAQsbqryE8FxyE4aNMUViK2aOIdEJ6L6RoR6P3mfLMQq%2Fm%2BoVqNNnD3%2BnyhbfVznUGlTqlfWXrMaKymkcjabVGl7P5x7H8nUDAAT6TuERkc6B1CmijzeqRconpTLT3UDhYxjDmPYWvCkTM2I3sTSVbronzVFrIXGpcMNoEfAfOL8jRRHfPGsQLxoxpUQHQFXaco7HOIvTmtRWHj6qf%2F3VRtkK7mlNqTqYqVZXXH8zfQQqyrZNEyWVvr1FL35yCjsu6oMIVaUyPMnPUJYttdHqz0FF5lxfgsD6AajJB3dvm80UPXvrNOR1beExqbhIIlH2sTpNHP1mo1%2BKE6p%2BSSjlOoAnpJAYJVK5lRsLnOq3M6xSYnWUphs7tSSFmvShsJKxKS4whXfioFxiIfCHz1dyqXMDdTkAU3M6d1y3cZEdESVSTH4wjvbjP74JyCc9IXECklsZYCA%3D";
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDrpevVFoVcnY%2FJ5LAkMHl3O%2BnNAw6J%2F2u6KryyNFM%2F4%2BB8ly6GTjF4MKs2Mrcyrpm8GqRF3mxK6p6ZV6sb06SVt8X0NNWFleB5ML9Xk5oLMdWCc5ixvDBi3HyDsinS9%2B48u6stja33usaDVepGCsxiX5oFQdHtind9oAcJYwHq4RmcGzGAw2wvaAjlYUrS3k24%2BqxvJgweP1rxvTfdVr4d9b9qBO7hciP9SheR%2BjPYVyIMtvfhFNq0eJgUhW1HQBRUWFNkcWHQ%2BitVqgK%2BtZf1qkG5%2BEoRAZ5RWRW10Ha9B3eOdCBa1shkCDF6nI%2BKjVEYE8gtEG7%2BeuiAUJdChCaD%2BGQcfIc6btyNI%2BmN2n7lAIR%2BHkk8drAlSLszC5D4fl966vNc7WzI%2Fz%2BWCJbZDR3S6mzpZADg5f3pf9IoGekkbH3HOJOljNB3HwHr7NjN5VpOfIk34%2FuPFW4R2TFLMm5R0Mxuj9eEookB6xPFpqYHb7ofNdy0q2%2F8qLYEDttnUWyin%2BClBStThVyIWlfgLiYG4%3D";
         window.__genspark_locale = "ja-JP";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDk8qaeSCbotQG6M3QobBCB1FXnnBt5SCFq0FkSelOfbKGhGx6KlCHvImnTU2K+hTB7ybG0qxA4/YtAtMAQsbqryE8FxyE4aNMUViK2aOIdEJ6L6RoR6P3mfLMQq/m+oVqNNnD3+nyhbfVznUGlTqlfWXrMaKymkcjabVGl7P5x7H8nUDAAT6TuERkc6B1CmijzeqRconpTLT3UDhYxjDmPYWvCkTM2I3sTSVbronzVFrIXGpcMNoEfAfOL8jRRHfPGsQLxoxpUQHQFXaco7HOIvTmtRWHj6qf/3VRtkK7mlNqTqYqVZXXH8zfQQqyrZNEyWVvr1FL35yCjsu6oMIVaUyPMnPUJYttdHqz0FF5lxfgsD6AajJB3dvm80UPXvrNOR1beExqbhIIlH2sTpNHP1mo1+KE6p+SSjlOoAnpJAYJVK5lRsLnOq3M6xSYnWUphs7tSSFmvShsJKxKS4whXfioFxiIfCHz1dyqXMDdTkAU3M6d1y3cZEdESVSTH4wjvbjP74JyCc9IXECklsZYCA=";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDrpevVFoVcnY/J5LAkMHl3O+nNAw6J/2u6KryyNFM/4+B8ly6GTjF4MKs2Mrcyrpm8GqRF3mxK6p6ZV6sb06SVt8X0NNWFleB5ML9Xk5oLMdWCc5ixvDBi3HyDsinS9+48u6stja33usaDVepGCsxiX5oFQdHtind9oAcJYwHq4RmcGzGAw2wvaAjlYUrS3k24+qxvJgweP1rxvTfdVr4d9b9qBO7hciP9SheR+jPYVyIMtvfhFNq0eJgUhW1HQBRUWFNkcWHQ+itVqgK+tZf1qkG5+EoRAZ5RWRW10Ha9B3eOdCBa1shkCDF6nI+KjVEYE8gtEG7+euiAUJdChCaD+GQcfIc6btyNI+mN2n7lAIR+Hkk8drAlSLszC5D4fl966vNc7WzI/z+WCJbZDR3S6mzpZADg5f3pf9IoGekkbH3HOJOljNB3HwHr7NjN5VpOfIk34/uPFW4R2TFLMm5R0Mxuj9eEookB6xPFpqYHb7ofNdy0q2/8qLYEDttnUWyin+ClBStThVyIWlfgLiYG4=";
     </script>
     
-    <script id="html_notice_dialog_script" src="./全身麻酔説明書_files/notice_dialog.js.ダウンロード"></script>
+    <script id="html_notice_dialog_script" src="./全身麻酔説明書（スマートフォン対応版）_files/notice_dialog.js.ダウンロード"></script>
     <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div><div id="trend_notification_app" class="trend_notification_app_outer"><div id="trend_notification"><div id="trend_notification_con"></div></div></div><div class="genspark-notice-dialog" style="display: none;">
       <div class="genspark-notice-content">
         <h2 class="genspark-notice-title">このサイトはユーザーによって作成されました、ご注意ください：</h2>
